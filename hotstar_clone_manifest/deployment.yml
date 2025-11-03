@@ -29,7 +29,7 @@ spec:
     spec:
       containers:
       - name: hotstarcontainer
-        image: datagenpro.azurecr.io/hotstar-poc:80b078e50f97230af92c618e67ab04298702e4af
+        image: datagenpro.azurecr.io/hotstar-poc:dcb7c8c31d4c669c68cd5a956d1a98b9aad31085
         ports:
         - containerPort: 3000
         resources:

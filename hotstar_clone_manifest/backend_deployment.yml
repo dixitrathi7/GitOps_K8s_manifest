@@ -1,0 +1,43 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ssbackend-deployment
+  namespace: test
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ssbackendapp
+  template:
+    metadata:
+      labels:
+        app: ssbackendapp
+    spec:
+      containers:
+      - name: ssbackendcontainer
+        image: devrefactorq.azurecr.io/k8s-ssp-backend:v3
+        resources:
+          requests:
+            memory: "200Mi"
+            cpu: "500m"
+          limits:
+            memory: "1Gi"
+            cpu: "1"
+        ports:
+        - containerPort: 8000
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: ssbackendsvc
+  namespace: test
+spec:
+  type: ClusterIP
+  selector:
+    app: ssbackendapp
+  ports:
+  - port: 8000
+    targetPort: 8000
+

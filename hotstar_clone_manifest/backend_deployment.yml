@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: ssbackendcontainer
-        image: dixit7/hotstar:v3
+        image: dixit7/hotstar:v1
         resources:
           requests:
             memory: "200Mi"

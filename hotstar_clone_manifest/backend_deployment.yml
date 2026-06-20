@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: ssbackendcontainer
-        image: nginx
+        image: dixit7/hotstar:v3
         resources:
           requests:
             memory: "200Mi"
@@ -24,7 +24,7 @@ spec:
             memory: "1Gi"
             cpu: "1"
         ports:
-        - containerPort: 80
+        - containerPort: 3000
 
 ---
 
@@ -39,5 +39,5 @@ spec:
     app: ssbackendapp
   ports:
   - port: 8000
-    targetPort: 80
+    targetPort: 3000
 

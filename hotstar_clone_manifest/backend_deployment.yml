@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: ssbackendcontainer
-        image: devrefactorq.azurecr.io/k8s-ssp-backend:v3
+        image: dixit7/hotstar:v3
         resources:
           requests:
             memory: "200Mi"

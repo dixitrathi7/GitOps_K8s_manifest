@@ -18,4 +18,4 @@ spec:
           - -c
           - |
             echo "Running frontend smoke test..."
-            curl -f http://frontend-svc:80
+            curl -f http://nginxsvc:80
